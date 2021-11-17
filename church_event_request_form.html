@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<title>Church Event Request Form</title>
+</head>
+<body>
+
+<center><h2>Church Event Request Form</h2></center>
+
+  <div>
+    <div class="container1">
+        <form action="submit_phpcrm_form.php" method="post"><br>
+            <div class="row">
+				<div class="col-50">
+					<label for="event_name">Event Name</label>
+					<input type="text" id="event_name" name="event_name" required>
+					<label for="event_stime">Event Start Time</label>
+					<input type="time" id="event_stime" name="event_stime" required>								
+				</div>
+				<div class="col-50">
+					<label for="date">Event Date</label>
+					<input type="date" id="date" name="date" required>
+					<label for="event_etime">Event End Time</label>
+					<input type="time" id="event_etime" name="event_etime" required>
+				</div>
+			</div>     
+            <label for="name_attendees">Name of Attendees</label>
+            <input type="text" id="name_attendees" name="name_attendees" required>
+			<label for="ministry">Ministry</label>
+                <select name="ministry" id="ministry">
+                  <option value="Adult">Adult</option>
+                  <option value="Children">Children</option>
+                  <option value="College">College</option>
+                  <option value="International">International</option>
+				  <option value="Music">Music</option>
+				  <option value="Pre School">Pre School</option>
+				  <option value="Prime Time">Prime Time</option>
+				  <option value="Off Campus">Off Campus</option>
+				  <option value="Students">Students</option>
+                </select>
+			<label for="name">Contact Person</label>
+            <input type="text" id="name" name="name" required>
+            <div class="row"> 
+                <div class="col-50">
+					<label for="email">Email</label>
+					<input type="email" id="email" name="email" required>
+					<h4>Will there be food at the event?</h4>
+					<input type="radio" id=" yes" name="radio1" value="Yes" style="margin-left:13px;">&nbspYes<label for="yes"></label><br>
+					<input type="radio" id="no" name="radio1" value="No" style="margin-left:13px;">&nbspNo<label for="no"></label><br><br>
+					<label for="stime">Childcare Start Time</label>
+					<input type="time" id="stime" name="stime">
+				</div>
+				<div class="col-50">
+					<label for="phone">Phone</label>
+					<input type="number" id="phone" name="phone" required>
+					<h4>Do you need childcare?</h4>
+					<input type="radio" id=" yes" name="radio2" value="Yes" style="margin-left:13px;">&nbspYes<label for="yes"></label><br>
+					<input type="radio" id="no" name="radio2" value="No" style="margin-left:13px;">&nbspNo<label for="no"></label><br><br>
+					<label for="etime">Childcare End Time</label>
+					<input type="time" id="etime" name="etime">
+				</div>
+            </div>     
+			<label for="message">Other Conditions/Details</label>
+            <textarea id="message" name="message" style="height:80px"></textarea>
+			<h4>Do you need A/V equipment?</h4>
+			<input type="radio" id=" yes" name="radio3" value="Yes" style="margin-left:13px;">&nbspYes<label for="yes"></label><br>
+			<input type="radio" id="no" name="radio3" value="No" style="margin-left:13px;">&nbspNo<label for="no"></label><br><br>
+			<div class="row">
+				<div class="col-50">
+					<p><b>Check all that apply</b></p>
+					<input type="checkbox" id="property1" name="property1" value="TV & VCR Combo">
+					<label for="property1" >TV & VCR Combo</label ><br>
+					<input type="checkbox" id="property2" name="property2" value=" TV & DVD Combo">
+					<label for="property2">TV & DVD Combo</label><br>				
+                </div>
+                <div class="col-50"><br><br><br>
+					<input type="checkbox" id="property3" name="property3" value="Overhead Projector">
+					<label for="property3" >Overhead Projector</label><br>
+					<input type="checkbox" id="property4" name="property4"value="Sound Equipment">
+					<label for="property4">Sound Equipment</label><br><br>
+				</div>
+			</div>
+			<label for="message1">Other Equipment needs</label>
+			<textarea id="message1" name="message1" style="height:80px"></textarea>  
+			<label for="message2">Who will be attending this event?</label>
+			<textarea id="message2" name="message2" style="height:80px"></textarea> 
+			<p>Do participants need to pre-register for the event?</p>
+			<input type="radio" id=" yes" name="radio4" value="Yes" style="margin-left:13px;">&nbspYes<label for="yes"></label><br>
+			<input type="radio" id="no" name="radio4" value="No" style="margin-left:13px;">&nbspNo<label for="no"></label><br><br>
+			<label for="registration_date">If yes, what are the dates of registration?</label>
+            <input type="text" id="registration_date" name="registration_date">
+			
+			<div class="row">
+				<div class="col-50">
+					<label for="event_fee">If yes, what is the cost of event fee?</label>
+					<input type="text" id="event_fee" name="event_fee">
+				</div>
+				<div class="col-50">
+					<label for="payment_method">Methods of acceptable payment</label>
+				    <input type="text" id="payment_method" name="payment_method" >
+				</div>
+            </div>     
+			<label for="message3">Event Description</label>
+            <textarea id="message3" name="message3" style="height:80px" required></textarea> 
+            <p><b>I agree with</b></p>
+			<input type="checkbox" id="agree" name="agree" value="Yes" required>
+			&nbsp <label for="agree" >"Through the submission of this request form, I understand and agree that ALL requests must go through the approval process. This process includes but is not limited to the approval of the following: dates, times, event purpose, set up and equipment needs, childcare availability, etc." You will be contacted after this request is submitted either for further questions about event or outcome of the approval process.</label ><br>
+			<input type="submit" value="SEND" class="btn">
+		</form>
+    </div>
+  </div>
+
+</body>
+</html>
